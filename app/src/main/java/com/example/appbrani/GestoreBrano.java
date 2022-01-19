@@ -7,8 +7,8 @@ public class GestoreBrano {
     public GestoreBrano(){
         listaBrani = new ArrayList<Brano>();
     }
-    public void addBrano(String titolo){
-        Brano nb = new Brano(titolo);
+    public void addBrano(String titolo, String durata){
+        Brano nb = new Brano(titolo, durata);
         listaBrani.add(nb);
     }
 }
