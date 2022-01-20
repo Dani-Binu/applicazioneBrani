@@ -3,7 +3,6 @@
 
     <string-array name="generi">
         <item>rap</item>
-        <item>indie</item>
         <item>techno</item>
         <item>edm</item>
     </string-array>

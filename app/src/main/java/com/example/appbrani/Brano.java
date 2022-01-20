@@ -8,8 +8,7 @@ public class Brano {
     private String durata;
 
 
-    public Brano(String titolo, String durata, String autore, String genere){
-
+    public Brano(){
         this.titolo = titolo;
         this.durata = durata;
         this.autore = autore;
@@ -28,6 +27,23 @@ public class Brano {
     public String getAutore() {
         return autore;
     }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public void setGenere(String genere) {
+        this.genere = genere;
+    }
+
+    public void setAutore(String autore) {
+        this.autore = autore;
+    }
+
+    public void setDurata(String durata) {
+        this.durata = durata;
+    }
+
     @Override
     public String toString(){
         return titolo + durata + genere + autore;
