@@ -13,4 +13,16 @@ public class GestoreBrano {
     public String toString(Brano b){
         return b.getTitolo() + " " + b.getDurata() + " " + b.getAutore() + " " + b.getGenere();
     }
+
+
+    public String listaBrani(){
+        StringBuilder sb = new StringBuilder();
+
+        for (Brano b: listaBrani){
+            sb.append(b.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
 }

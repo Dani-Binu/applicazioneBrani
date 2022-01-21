@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,12 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 b.setGenere(genereCanzone.getSelectedItem().toString());
                 gb.addBrano(b);
                 Log.d("brano creato", b.toString());
+                Toast.makeText(getApplicationContext(), "testBrano", Toast.LENGTH_LONG).show();
             }
         });
     }
     public void lanciaDue(View v){
+        //String lista = gb.listaBrani();
         Intent i = new Intent(getApplicationContext(), ActivityArray.class);
-        i.putExtra("messaggio", gb.toString(b));
+        i.putExtra("messaggio", gb.toString(b)); //richiamo la variabile lista
         startActivity(i);
     }
 }
