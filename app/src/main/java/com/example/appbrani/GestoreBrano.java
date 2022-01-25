@@ -7,11 +7,17 @@ public class GestoreBrano {
     public GestoreBrano(){
         listaBrani = new ArrayList<Brano>();
     }
+
+    public ArrayList<Brano> getListaBrani() {
+        return listaBrani;
+    }
+
     public void addBrano(Brano nb){
         listaBrani.add(nb);
     }
     public String toString(Brano b){
-        return b.getTitolo() + " " + b.getDurata() + " " + b.getAutore() + " " + b.getGenere();
+        return "Titolo: " + b.getTitolo() + "\n Durata: " + b.getDurata() +
+                "\n Autore: " + b.getAutore() + "\n Genere: " + b.getGenere();
     }
 
 

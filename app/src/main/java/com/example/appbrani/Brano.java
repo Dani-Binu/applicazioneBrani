@@ -46,7 +46,7 @@ public class Brano {
 
     @Override
     public String toString(){
-        return titolo + durata + genere + autore;
+        return "\ntitolo: "+titolo+"\ndurata: " + durata+"\ngenere: " + genere+"\nautore: " + autore;
     }
 
 }

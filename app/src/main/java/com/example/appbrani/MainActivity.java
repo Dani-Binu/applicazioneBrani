@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         autoreCanzone = (EditText)findViewById(R.id.autore);
 
         gb = new GestoreBrano();
-        b = new Brano();
 
         btnInserisci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                b = new Brano();
                 b.setTitolo(titoloCanzone.getText().toString());
                 b.setDurata(durataCanzone.getText().toString());
                 b.setAutore(autoreCanzone.getText().toString());
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void lanciaDue(View v){
         //String lista = gb.listaBrani();
         Intent i = new Intent(getApplicationContext(), ActivityArray.class);
-        i.putExtra("messaggio", gb.toString(b)); //richiamo la variabile lista
+        i.putExtra("messaggio", gb.listaBrani()); //richiamo la variabile lista
         startActivity(i);
     }
 }
